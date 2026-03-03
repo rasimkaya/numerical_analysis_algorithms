@@ -12,7 +12,6 @@
 
 > **Kurum:** T.C. Gazi Üniversitesi | Fen Fakültesi | Matematik Bölümü <br>
 > **Hazırlayan:** Rasim Kaya <br>
-> **Danışman:** Prof. Dr. Mediha Örkcü <br>
 
 ---
 
@@ -46,3 +45,4 @@ $$f(a) \cdot f(b) < 0$$
 ise, f(c) = 0 olacak şekilde bir c ∈ (a,b) vardır. *(Bu durum, aralıkta en az bir kök olduğunu garanti eder ve Aralık Yarılama yönteminin temelini oluşturur.)*
 
 ---
+
