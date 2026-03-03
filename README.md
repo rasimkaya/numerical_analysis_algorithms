@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>🧮 Lineer Olmayan Denklemlerin Nümerik Çözümleri</h1>
-  <p><i>Python ile Nümerik Analiz Algoritmaları, İterasyon Görselleştirmeleri ve Kök Bulma Yöntemleri</i></p>
+  <h1>🧮 Numerical Solutions of Nonlinear Equations</h1>
+  <p><i>Python Implementations of Numerical Analysis Algorithms, Iteration Visualizations, and Root-Finding Methods</i></p>
 
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="Numpy" />
@@ -10,39 +10,36 @@
 
 <br>
 
-> **Kurum:** T.C. Gazi Üniversitesi | Fen Fakültesi | Matematik Bölümü <br>
-> **Hazırlayan:** Rasim Kaya <br>
+> **Institution:** Gazi University | Faculty of Science | Department of Mathematics <br>
+> **Author:** Rasim Kaya <br>
+> **Advisor:** Prof. Dr. Mediha Örkcü <br>
 
 ---
 
-## 📖 Proje Hakkında
-Bu proje, lineer olmayan denklemlerin köklerini bulmak için kullanılan temel nümerik analiz yöntemlerinin **Python** ile algoritmik olarak uygulanmasını ve **Matplotlib** kullanılarak adım adım görselleştirilmesini içermektedir. Projede kod mimarisine özen gösterilmiş, `DRY` prensibi ile ortak fonksiyonlar modüler hale getirilmiştir.
+## 📖 About the Project
+This repository contains Python implementations of fundamental numerical analysis methods used to find the roots of nonlinear equations. The algorithms are applied programmatically, strictly adhering to mathematical principles, and visualized step-by-step using **Matplotlib**. The project focuses on clean code architecture and modular design, following the `DRY` (Don't Repeat Yourself) principle for shared utilities.
 
 ---
 
-## 🔬 Temel Teoremler (Kök Varlığı)
+## 🔬 Fundamental Theorems (Existence of a Root)
 
-Sayısal bir yöntem oluşturabilmemiz için kökün varlığından, yani varlığını bildiğimiz bir aralığa ihtiyacımız vardır. Algoritmaların dayandığı temel teoremler şunlardır:
+To construct a numerical method, we first need to guarantee the existence of a root within a specific interval. The algorithms in this project are built upon the following fundamental theorems:
 
-### 1. Rolle Teoremi
-Bir f fonksiyonu [a,b] aralığında sürekli ve (a,b) aralığında türevlenebilir olsun. Eğer f(a) = f(b) ise;
+### 1. Rolle's Theorem
+Let $f$ be a continuous function on the closed interval $[a,b]$ and differentiable on the open interval $(a,b)$. If $f(a) = f(b)$, then there exists at least one $c \in (a,b)$ such that:
 $$f'(c) = 0$$
-olacak şekilde en az bir c ∈ (a,b) vardır.
 
-### 2. Ortalama Değer Teoremi
-f fonksiyonu [a,b] aralığında sürekli ve (a,b) aralığında türevlenebilir olsun.
+### 2. Mean Value Theorem
+Let $f$ be continuous on $[a,b]$ and differentiable on $(a,b)$. Then there exists a $c \in (a,b)$ such that:
 $$f'(c) = \frac{f(b) - f(a)}{b - a}$$
-olacak şekilde bir c ∈ (a,b) vardır.
 
-### 3. Ara Değer Teoremi
-f fonksiyonu [a,b] aralığında sürekli olsun. Eğer bir K sayısı f(a) ile f(b)'nin arasında ise;
+### 3. Intermediate Value Theorem
+Let $f$ be a continuous function on $[a,b]$. If $K$ is any number between $f(a)$ and $f(b)$, then there exists at least one $c \in (a,b)$ such that:
 $$f(c) = K$$
-olacak şekilde bir c ∈ (a,b) vardır.
 
-### 4. Bolzano Teoremi
-f fonksiyonu [a,b] aralığında sürekli olsun. Eğer uç noktaların işaretleri zıt ise, yani;
+### 4. Bolzano's Theorem
+Let $f$ be continuous on $[a,b]$. If the signs of the function values at the endpoints are opposite, meaning:
 $$f(a) \cdot f(b) < 0$$
-ise, f(c) = 0 olacak şekilde bir c ∈ (a,b) vardır. *(Bu durum, aralıkta en az bir kök olduğunu garanti eder ve Aralık Yarılama yönteminin temelini oluşturur.)*
+then there exists at least one $c \in (a,b)$ such that $f(c) = 0$. *(This condition guarantees the existence of a root in the interval and forms the core basis of the Bisection Method).*
 
 ---
-
