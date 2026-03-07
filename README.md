@@ -98,14 +98,15 @@ In this project, the Newton-Raphson script:
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-cd YOUR_REPO_NAME
+git clone [https://github.com/rasimkaya/numerical_analysis_algorithms.git](https://github.com/rasimkaya/numerical_analysis_algorithms.git)
+cd numerical_analysis_algorithms
 
 2. Set Up Virtual Environment
 
 python -m venv venv
 # On Windows:
 .\venv\Scripts\activate
+
 
 
 
